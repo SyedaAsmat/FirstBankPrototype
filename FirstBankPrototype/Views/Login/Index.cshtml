@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to First Bank</h1>
+    <h3 class="display-7">Login to continue</h3>
+</div>
+
+<div class="alert-danger text-center">
+    <h5>@TempData["invalidMsg"]</h5>
+</div>
+
+<div class="login-form">
+    <form method="post" action="@Url.Action("Index")">
+        <table>
+            <tr>
+                <td>
+                    <label>Username: </label>
+                </td>
+                <td>
+                    <input class="form-control" name="username" id="username" type="text" placeholder="Enter your username" autocomplete="off" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Password: </label>
+                </td>
+                <td>
+                    <input class="form-control" name="password" id="password" type="password" maxlength="8" placeholder="Enter your password" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="element-with-gap">
+                    <button class="btn btn-primary" type="submit">Log In</button>
+                    <button class="btn btn-secondary" type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
